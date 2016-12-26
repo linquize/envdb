@@ -84,7 +84,7 @@ func VersionCheck(base, version string) bool {
 		return false
 	}
 
-	if svi2 < cvi2 {
+	if (svi == cvi) && (svi2 < cvi2) {
 		return false
 	}
 
@@ -96,7 +96,7 @@ func VersionCheck(base, version string) bool {
 		return false
 	}
 
-	if svi3 < cvi3 {
+	if (svi == cvi) && (svi2 == svi2) && (svi3 < cvi3) {
 		return false
 	}
 
