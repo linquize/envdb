@@ -134,7 +134,7 @@ func (q *Query) Run() ([]byte, error) {
 
 	items := []string{binary, "--" + q.Format, q.Sql}
 
-	output, err := exec.Command("/usr/bin/sudo", items...).CombinedOutput()
+	output, err := exec.Command("/usr/bin/sudo", items...).Output()
 
 	if err != nil {
 		err = errors.New(string(output))
